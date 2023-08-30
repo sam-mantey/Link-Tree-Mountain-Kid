@@ -12,7 +12,7 @@ export default function ShareSearch() {
   return (
     <div className='flex justify-between items-center h-20 md:w-4/5 mx-auto'>
             <button  className='cursor-pointer' >
-              <Image  alt='' src={Share} className='h-5 w-5 md:h-7 md:w-7' onClick={handleClick}/>
+              <Image alt='' src={Share} className='h-5 w-5 md:h-7 md:w-7' onClick={handleClick}/>
               
             </button>
             <div className='cursor-pointer'>
