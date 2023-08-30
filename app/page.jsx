@@ -6,7 +6,7 @@ import MountainKid from '../public/mountainKid.png'
 import Accessories from '@/components/Accessories'
 import Verified from '../public/verified.png'
 import DeskSetup from '../public/setup.jpeg'
-import Kid from '../public/Kid.png'
+import Kid from '../public/kid.png'
 import ShareSearch from '@/components/ShareSearch'
 
 export default function Home() {
