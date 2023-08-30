@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import Banner from '../public/banner.jpeg'
 import Profile from '../public/profile.jpeg'
@@ -9,6 +10,7 @@ import DeskSetup from '../public/setup.jpeg'
 import ShareSearch from '@/components/ShareSearch'
 import Mountain from '../public/mountain.png'
 import { Fragment } from 'react'
+import ShareModal from '@/components/ShareModal'
 
 export default function Home() {
   return (
@@ -70,6 +72,7 @@ export default function Home() {
 
           <Image src={Mountain} alt='' className='py-7 mx-auto'/>
         </section>
+
       </Fragment>
     </>
   )

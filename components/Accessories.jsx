@@ -5,9 +5,12 @@ import Popular from './Popular'
 import OnDesk from './OnDesk'
 import Lights from './Lights'
 import Setup from './Setup'
+import { accessories } from './data'
 
-export default async function Accessories() {
-    const items = await getItems()
+export default  function Accessories() {
+    // const items = await getItems()
+    const items = accessories
+    console.log(items)
   return ( 
     <section className='flex flex-col gap-10 md:my-20'>
 
@@ -23,8 +26,8 @@ export default async function Accessories() {
 
 // A function to fetch data form the database server
 // async to make it an asynchronous function where we can use await for the promise
-async function getItems() {
-    const res = await fetch('http://localhost:5000/accessories')
+// async function getItems() {
+//     const res = await fetch('http://localhost:5000/accessories')
 
-    return res.json()
-}
+//     return res.json()
+// }
