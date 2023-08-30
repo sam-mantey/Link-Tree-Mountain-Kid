@@ -13,9 +13,9 @@ export default function Lights(props) {
             {/* Iterating through the popular data and rendering it on the page */}
             {lightItems.map(item => 
                 (
-                <div className='max-h-[120px] max-w-[120px] shadow-2xl rounded-2xl md:max-h-[180px] md:max-w-[180px] md:my-10 lg:max-h-[220px] lg:max-w-[220px] lg:my-12'>
-                <Link key={item.id} href={item.amazon_link} >
-                    <Image src={item.img} height={1080} width={1040} className='rounded-2xl'/>
+                <div key={item.id} className='max-h-[120px] max-w-[120px] shadow-2xl rounded-2xl md:max-h-[180px] md:max-w-[180px] md:my-10 lg:max-h-[220px] lg:max-w-[220px] lg:my-12'>
+                <Link  href={item.amazon_link} >
+                    <Image src={item.img} alt='' height={1080} width={1040} className='rounded-2xl'/>
                 </Link>
                 </div>
                 ))}

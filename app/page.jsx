@@ -8,13 +8,16 @@ import Verified from '../public/verified.png'
 import DeskSetup from '../public/setup.jpeg'
 import ShareSearch from '@/components/ShareSearch'
 import Mountain from '../public/mountain.png'
+import { Fragment } from 'react'
 
 export default function Home() {
   return (
     <>
+      <Fragment>
         <div className='object-cover'>
         <Image 
           src={Banner}
+          alt=''
           className='w-screen h-36 md:h-[300px]'
         />
         </div>
@@ -31,14 +34,14 @@ export default function Home() {
             <div className='absolute flex justify-center align-center h-[90] w-full top-[-50px] md:top-[-160px]'>
 
               <div>
-              <Image src={Profile} className='h-[100px]  w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
+              <Image src={Profile} alt='' className='h-[100px]  w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
               </div>
 
             </div>
 
             <div className='flex justify-center align-center '>
               <h1 className='text-center font-bold md:text-xl'>Kristian / @MountainKid</h1>
-              <Image src={Verified} className='h-[20px] w-[20px]'/>
+              <Image src={Verified} alt='' className='h-[20px] w-[20px]'/>
             </div>
 
 
@@ -56,18 +59,18 @@ export default function Home() {
         </main>
 
         <div className='w-11/12 mx-auto'>
-          <Image src={MountainKid} className='rounded-3xl m-auto'/>
+          <Image src={MountainKid} alt='' className='rounded-3xl m-auto'/>
         </div>
 
         {/* list of items he sells */}
         <Accessories />
 
         <section className='mx-10 my-14 flex flex-col justify-center'>
-          <Image src={DeskSetup} height={500} width={500} className='rounded-xl mx-auto'/>
+          <Image src={DeskSetup} alt='' height={500} width={500} className='rounded-xl mx-auto'/>
 
-          <Image src={Mountain} className='py-7 mx-auto'/>
+          <Image src={Mountain} alt='' className='py-7 mx-auto'/>
         </section>
-      
+      </Fragment>
     </>
   )
 }

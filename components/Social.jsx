@@ -39,7 +39,8 @@ function Handle(props) {
   return (
     <Link href={url} className='h-10 w-10'>
             <Image  
-                src={img}/>
+                src={img}
+                alt=''/>
     </Link>
   )
 }
