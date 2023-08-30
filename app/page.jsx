@@ -6,8 +6,8 @@ import MountainKid from '../public/mountainKid.png'
 import Accessories from '@/components/Accessories'
 import Verified from '../public/verified.png'
 import DeskSetup from '../public/setup.jpeg'
-import Kid from '../public/kid.png'
 import ShareSearch from '@/components/ShareSearch'
+import Mountain from '../public/mountain.png'
 
 export default function Home() {
   return (
@@ -65,7 +65,7 @@ export default function Home() {
         <section className='mx-10 my-14 flex flex-col justify-center'>
           <Image src={DeskSetup} height={500} width={500} className='rounded-xl mx-auto'/>
 
-          <Image src={Kid} className='py-7 mx-auto'/>
+          <Image src={Mountain} className='py-7 mx-auto'/>
         </section>
       
     </>
