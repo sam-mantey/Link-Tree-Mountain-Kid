@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import Banner from '../public/banner.jpeg'
 import Profile from '../public/profile.jpeg'
@@ -36,7 +35,7 @@ export default function Home() {
             <div className='absolute flex justify-center align-center h-[90] w-full top-[-50px] md:top-[-160px]'>
 
               <div>
-              <Image src={Profile} alt='' className='h-[100px]  w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
+              <Image src={Profile} alt='' className='z-0 h-[100px]  w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
               </div>
 
             </div>

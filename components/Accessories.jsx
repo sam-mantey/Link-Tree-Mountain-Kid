@@ -1,16 +1,14 @@
-import Link from 'next/link'
+import { sql } from "@vercel/postgres"; 
 import React from 'react'
-import Image from 'next/image'
 import Popular from './Popular'
 import OnDesk from './OnDesk'
 import Lights from './Lights'
 import Setup from './Setup'
-import { accessories } from './data'
 
-export default  function Accessories() {
+export default async function Accessories() { 
     // const items = await getItems()
-    const items = accessories
-    console.log(items)
+    const { rows } = await sql`SELECT * from accessories`
+    const items = rows
   return ( 
     <section className='flex flex-col gap-10 md:my-20'>
 
@@ -30,4 +28,22 @@ export default  function Accessories() {
 //     const res = await fetch('http://localhost:5000/accessories')
 
 //     return res.json()
+// }
+
+
+
+// import { sql } from "@vercel/postgres";
+
+// export default async function Cart({ params }) {
+//   const { rows } = await sql`SELECT * from CARTS where user_id=${params.user}`;
+
+//   return (
+//     <div>
+//       {rows.map((row) => (
+//         <div key={row.id}>
+//           {row.id} - {row.quantity}
+//         </div>
+//       ))}
+//     </div>
+//   );
 // }

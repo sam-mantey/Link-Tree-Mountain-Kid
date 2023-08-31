@@ -15,7 +15,7 @@ export default function OnDesk(props) {
             (
               <div key={item.id} className='max-h-[120px] max-w-[100px] shadow-2xl rounded-2xl md:max-h-[180px] md:max-w-[180px] md:my-10 '>
                 <Link  href={item.amazon_link} >
-                  <Image src={item.img} alt='' height={500} width={500} className='rounded-2xl'/>
+                  <Image src={item.img_path} alt='' height={500} width={500} className='rounded-2xl'/>
                 </Link>
               </div>
             ))}

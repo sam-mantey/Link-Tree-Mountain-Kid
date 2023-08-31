@@ -15,7 +15,7 @@ export default function Popular(props) {
             (
               <div key={item.id} className='max-h-[120px] max-w-[120px] shadow-2xl rounded-2xl md:max-h-[180px] md:max-w-[180px] md:my-10 lg:max-h-[220px] lg:max-w-[220px] lg:my-12'>
                 <Link  href={item.amazon_link}>
-                  <Image src={item.img} alt='' height={500} width={500} className='rounded-2xl'/>
+                  <Image src={item.img_path} alt='' height={500} width={500} className='rounded-2xl'/>
                 </Link>
               </div>
             ))}
