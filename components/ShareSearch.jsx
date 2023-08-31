@@ -4,23 +4,27 @@ import Image from 'next/image'
 import Share from '../public/share.png'
 import Search from '../public/search.png'
 import ShareModal from './ShareModal'
+import SearchModal from './SearchModal'
 
-export default function ShareSearch() {
-    const [isClicked, setIsClicked] = useState('false')
-    const handleClick = () => {
-      setIsClicked(prevState => !prevState)
-    }
+export default function ShareSearch() { 
+    const [isShareOpen, setIsShareOpen] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(false)
   return (
-    <div className='flex justify-between items-center h-20 md:w-4/5 mx-auto'>
-            <button  className='cursor-pointer' >
-              <Image alt='' src={Share} className='h-5 w-5 md:h-7 md:w-7' onClick={handleClick}/>
+    <>
+      <div className='flex justify-between items-center h-20 md:w-4/5 mx-auto'>
+            <button  className='cursor-pointer' onClick={() => setIsShareOpen(true)}>
+              <Image alt='' src={Share} className='h-5 w-5 md:h-7 md:w-7' />
               
             </button>
-            <div className='cursor-pointer'>
+            <button className='cursor-pointer flex-end' onClick={() => setIsSearchOpen(true)}>
             <Image alt='' src={Search} className='h-5 w-5 md:h-7 md:w-7'/>
-            </div>
+            </button>
 
-            {/* <ShareModal /> */}
-    </div>
+      </div>
+        {/* Displayiny the modals for the share ab=nd search */}
+           <ShareModal isVisible={isShareOpen} onClose={() => setIsShareOpen(false)}/>
+           <SearchModal isVisible={isSearchOpen} onClose={() => setIsSearchOpen(false)}/>
+    </>
+    
   )
 }

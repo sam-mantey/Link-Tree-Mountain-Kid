@@ -8,7 +8,7 @@ import Setup from './Setup'
 export default async function Accessories() { 
     // const items = await getItems()
     const { rows } = await sql`SELECT * from accessories`
-    const items = rows
+   const items = rows
   return ( 
     <section className='flex flex-col gap-10 md:my-20'>
 
