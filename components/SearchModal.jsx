@@ -2,10 +2,6 @@
 import { sql } from "@vercel/postgres";
 import React from 'react'
 import FetchingSearch from './FetchingSearch'
-import { accessories } from './data'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useEffect } from "react";
 
 export default function SearchModal({isVisible, onClose}) {
   if (!isVisible) return null
