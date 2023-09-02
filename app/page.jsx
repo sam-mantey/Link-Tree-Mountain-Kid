@@ -12,6 +12,7 @@ import { Fragment } from 'react'
 import ShareModal from '@/components/ShareModal'
 
 export default function Home() {
+
   return (
     <>
       <Fragment>
@@ -32,16 +33,17 @@ export default function Home() {
           
           <ShareSearch />
             {/* used flex control to center the profile image */}
-            <div className='absolute flex justify-center align-center h-[90] w-full top-[-50px] md:top-[-160px]'>
+            <div className='z-0 mx-auto absolute h-[90] w-fit top-[-50px] left-[35%] md:left-[42.9%] md:top-[-160px]'>
 
               <div>
-              <Image src={Profile} alt='' className='z-0 h-[100px]  w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
+              <Image src={Profile} alt='' className=' h-[100px] mx-auto w-[100px] rounded-full my-0 md:h-[160px]  md:w-[160px]'/>
               </div>
 
             </div>
+            
 
-            <div className='flex justify-center align-center '>
-              <h1 className='text-center font-bold md:text-xl'>Kristian / @MountainKid</h1>
+            <div className='flex justify-center items-center '>
+              <h1 className='text-center font-bold md:text-xl'>Kristian / @MountainKid   </h1>
               <Image src={Verified} alt='' className='h-[20px] w-[20px]'/>
             </div>
 

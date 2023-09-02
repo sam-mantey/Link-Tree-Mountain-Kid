@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         dark: "rgba(0, 0, 0, 0.4)",
-        light: 'rgba(0, 0, 0, 0) 0px 30px 60px -10px'
+        light: 'rgba(0, 0, 0, 0) 0px 30px 60px -10px',
+        copy: '#50BD81'
       }
     },
   },

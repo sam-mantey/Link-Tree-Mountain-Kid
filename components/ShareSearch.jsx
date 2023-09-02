@@ -11,7 +11,7 @@ export default function ShareSearch() {
     const [isSearchOpen, setIsSearchOpen] = useState(false)
   return (
     <>
-      <div className='flex justify-between items-center h-20 md:w-4/5 mx-auto'>
+      <div className=' z-10 flex justify-between items-center h-20 md:w-4/5 mx-auto'>
             <button  className='cursor-pointer' onClick={() => setIsShareOpen(true)}>
               <Image alt='' src={Share} className='h-5 w-5 md:h-7 md:w-7' />
               

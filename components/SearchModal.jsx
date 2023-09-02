@@ -1,29 +1,58 @@
+'use client' 
 import { sql } from "@vercel/postgres";
 import React from 'react'
 import FetchingSearch from './FetchingSearch'
 import { accessories } from './data'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect } from "react";
 
 export default function SearchModal({isVisible, onClose}) {
-
-  
   if (!isVisible) return null
+  
   let items
   let itemName 
-  async function getName(name) {
+
+  const getName = (name) => {
     itemName = name
-    console.log(itemName)
-    const { data } = await sql`SELECT * from accessories where name = ${name}`
-    items = data
-    console.log(items)
+  }
+
+  const getData = async () => {
+    const { rows } = await sql`SELECT * from accessories where name=${itemName}`
+    return rows
+  }
+
+//   useEffect(() => {
+//     getName()
+    
+// }, [itemName])
+
+  items = getData()
+  console.log(items)
+
+
+  
+  // async function getName(name) {
+  //   itemName = name
+  //   console.log(itemName)
+  //   const { data } = await sql`SELECT * from accessories where name = ${name}`
+  //   items = data
+  //   console.log(items)
+  // }
+
+  const handleClick = (e) => {
+    if (e.target.id !== 'dark-background') {
+      return null
+    } else {
+      onClose()
+    }
   }
 
 
   return (
-    <div className='z-20  fixed inset-0 bg-dark' >
+    <div className='z-20  fixed inset-0 bg-dark p-10' id="dark-background" onClick={handleClick}>
 
-      <div className=' w-11/12 md:w-4/5 flex flex-col mt-10 justify-center items-center mx-auto'>
+      <div className='h-fit w-full md:w-3/5 flex flex-col justify-center items-center mx-auto' id="search" >
 
 
         <FetchingSearch change={getName}/>
