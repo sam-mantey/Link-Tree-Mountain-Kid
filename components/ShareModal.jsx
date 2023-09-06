@@ -1,5 +1,4 @@
 'use client'
-import React, { useState } from 'react'
 import Image from 'next/image'
 import Profile from '../public/profile.jpeg'
 import Qricon from '../public/qrcode-solid.svg'
