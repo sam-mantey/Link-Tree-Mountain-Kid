@@ -73,8 +73,6 @@ export default function SearchModal({isVisible, onClose}) {
         </div>
           
 
-            <p>dshdhofewlo</p>
-
 
       </div>
 
