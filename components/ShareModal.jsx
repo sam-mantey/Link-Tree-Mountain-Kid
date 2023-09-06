@@ -11,7 +11,6 @@ import QRcode from '../public/qrcode_www.liinks.co.png'
 //Displaying the share modal
 export default function ShareModal( { isVisible , onClose}) {
   const [showShare, setShowShare] = useState(true)
-  if (!isVisible ) return null
 
 
   const handleClick = (e) => {

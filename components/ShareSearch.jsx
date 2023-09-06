@@ -22,7 +22,7 @@ export default function ShareSearch() {
 
       </div>
         {/* Displayiny the modals for the share ab=nd search */}
-           <ShareModal isVisible={isShareOpen} onClose={() => setIsShareOpen(false)}/>
+           {isShareOpen && <ShareModal isVisible={isShareOpen} onClose={() => setIsShareOpen(false)}/>}
            <SearchModal isVisible={isSearchOpen} onClose={() => setIsSearchOpen(false)}/>
     </>
     
