@@ -2,6 +2,7 @@
 import { sql } from "@vercel/postgres";
 import React from 'react'
 import FetchingSearch from './FetchingSearch'
+import { accessories } from "./data";
 
 export default function SearchModal({isVisible, onClose}) {
   if (!isVisible) return null
@@ -9,22 +10,31 @@ export default function SearchModal({isVisible, onClose}) {
   let items
   let itemName 
 
-  const getName = (name) => {
-    itemName = name
-  }
 
   const getData = async () => {
-    const { rows } = await sql`SELECT * from accessories where name=${itemName}`
-    return rows
+    // const { search } = await sql`SELECT * from accessories where name=${itemName};`
+    items = accessories.filter(item => item.name === itemName)
+    console.log('search returned : ' + items)
   }
+
+  const getName = (name) => {
+    itemName = name
+    
+    getData()
+    console.log(itemName)
+  }
+
+
+
+
+  
 
 //   useEffect(() => {
 //     getName()
     
 // }, [itemName])
 
-  items = getData()
-  console.log(items)
+  
 
 
   
