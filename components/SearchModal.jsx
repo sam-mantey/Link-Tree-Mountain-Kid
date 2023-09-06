@@ -1,17 +1,15 @@
 'use client' 
-import { sql } from "@vercel/postgres";
-import React, { useState } from 'react'
+import React from 'react'
 import FetchingSearch from './FetchingSearch'
-import { accessories } from "./data";
+
 
 export default function SearchModal({isVisible, onClose}) {
-  const [itemName, setItemName] = useState('')
   if (!isVisible) return null
   
-  let items
+  // let items
+  let itemName 
 
 
-  
   const getData = async () => {
     // const { search } = await sql`SELECT * from accessories where name=${itemName};`
     // items = accessories.filter(item => item.name === itemName)
@@ -19,13 +17,11 @@ export default function SearchModal({isVisible, onClose}) {
   }
 
   const getName = (name) => {
-    setItemName(name)
-    
-    // getData()
+    itemName = name
   }
 
 
-  console.log(itemName)
+
 
   
 
