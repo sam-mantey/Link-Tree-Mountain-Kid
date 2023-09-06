@@ -4,7 +4,8 @@ import FetchingSearch from './FetchingSearch'
 
 
 export default function SearchModal({isVisible, onClose}) {
-  if (!isVisible) return null
+  let visible = isVisible
+  if (!visible) return null
   
   // let items
   let itemName 
